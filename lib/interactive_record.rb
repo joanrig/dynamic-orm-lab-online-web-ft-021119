@@ -68,7 +68,7 @@ class InteractiveRecord
   def self.find_by(attributes)
     i = 0
     attributes.each do |attribute|
-      col_name = attributes.key[i].to_s
+      col_name = attributes.key[0].to_s
       value = attributes[0]
       i += 1
       binding.pry
