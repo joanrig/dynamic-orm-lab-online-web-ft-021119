@@ -65,18 +65,12 @@ class InteractiveRecord
     #binding.pry
   end
 
-  def self.find_by(attributes)
-    i = 0
-    attributes.each do |attribute|
-      col_name = attributes.key[0].to_s
-      value = attributes[0]
-      i += 1
-      binding.pry
-    end
+  def self.find_by(attribute)
+    col_name = attributes.key[0].to_s
+    value = attributes[0]
 
-    binding.pry
     sql = "SELECT * FROM #{table_name} WHERE #{col_name} = ?"
-    result =  DB[:conn].execute(sql, attribute)
+    result =  DB[:conn].execute(sql, col_name)
   end
 
 end
