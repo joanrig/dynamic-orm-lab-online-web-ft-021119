@@ -70,7 +70,7 @@ class InteractiveRecord
     value = attribute[0]
 
     sql = "SELECT * FROM #{table_name} WHERE #{col_name} = ?"
-    result =  DB[:conn].execute(sql, col_name)
+    result =  DB[:conn].execute(sql, value)
   end
 
 end
