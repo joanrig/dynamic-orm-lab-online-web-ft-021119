@@ -64,6 +64,10 @@ class InteractiveRecord
     result =  DB[:conn].execute(sql, name)[0]
     binding.pry
   end
+  # -[{"grade"=>10, "id"=>1, "name"=>"Jan"}]
+  #     +"grade" => 10,
+  #     +"id" => 1,
+  #     +"name" => "Jan",
 
 
 
