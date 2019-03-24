@@ -65,7 +65,7 @@ class InteractiveRecord
     #binding.pry
   end
 
-  def self.find_by
+  def self.find_by(attribute)
     col_name = attribute.key[0].to_s
     value = attribute[0]
 
