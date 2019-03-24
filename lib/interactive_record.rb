@@ -64,11 +64,10 @@ class InteractiveRecord
     result =  DB[:conn].execute(sql, name)
     #binding.pry
   end
-  # -[{"grade"=>10, "id"=>1, "name"=>"Jan"}]
-  #     +"grade" => 10,
-  #     +"id" => 1,
-  #     +"name" => "Jan",
 
-
+  def find_by(attribute)
+    sql = "SELECT * FROM #{table_name} WHERE #{attribute} = ?"
+    result =  DB[:conn].execute(sql, "#{attribute}")
+  end
 
 end
